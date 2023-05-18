@@ -1,0 +1,10 @@
+{
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "slidev",
+    "build": "slidev build --base /2023/4006-proposal/ --out ../../dist/2023/4006-proposal",
+    "export": "slidev export --per-slide --output ../4006-proposal.pdf",
+    "play": "slidev --remote --tunnel"
+  }
+}
