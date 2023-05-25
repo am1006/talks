@@ -28,7 +28,9 @@ layout: quote
 class: text-center
 ---
 
-# Notification-driven Development
+You can view the slides at 
+
+[talks.leopold.im/2023/4006-proposal/](https://talks.leopold.im/2023/4006-proposal/)
 
 ---
 layout: center
