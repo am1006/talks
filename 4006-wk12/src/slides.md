@@ -1,4 +1,7 @@
 ---
+title: MGMT4006 Research Proposal
+titleTemplate: '%s - Leopold Zhou'
+info: Slides for MGMT4006 Research Proposal Presentation
 layout: cover
 highlighter: shiki
 css: unocss
@@ -8,10 +11,9 @@ growSize: 1.5
 ---
 
 <div mt--2>
-<h1 flex="~ col">
-<div>Research Proposal</div>
-<div flex="~ gap3" items-center><div i-simple-icons-hackclub />Social engineering</div>
-</h1>
+<h2 flex="~ col" mb-4>
+Experimental approach to investigate the effect of information support functions against social engineering attacks
+</h2>
 
 <div uppercase tracking-widest op50>
 Leopold Zhou
@@ -23,86 +25,56 @@ Leopold Zhou
   <today />
 </div>
 
+<!--
+Hi Nick, thanks very much for allowing me to present online
+-->
+
 ---
-layout: quote
+layout: center
 class: text-center
 ---
 
-You can view the slides at 
+## You can view these slides online.
+
+<div flex="~ row items-center gap-2">
 
 [talks.leopold.im/2023/4006-proposal/](https://talks.leopold.im/2023/4006-proposal/)
 
----
-layout: center
-growX: 50
-growY: 120
-growSize: 1.5
----
+<div i-iconoir-cursor-pointer class="animate-ping"></div>
+</div>
 
-<h1 class="text-5xl!" w-200>I Get</h1>
-<h1 class="text-5xl!">A Lot of Notifications</h1>
-<h1 class="text-5xl! font-bold">Everyday</h1>
+<!-- 
+Since you may want to view the slides later, I have hosted them online. You can use the link here to get them.
+-->
 
 ---
 layout: center
-growX: -10
-growY: 50
-growSize: 0.75
----
-
-<img src="/notifications-count.png" w-100 mix-blend-lighten filter-contrast-120 />
-
----
-layout: center
-growX: 50
-growY: 0
-growSize: 1.5
-clicks: 4
----
-
-<h1 class="text-5xl!" v-click="1" w-200>I <span transition-all duration-300 :class="$slidev.nav.clicks === 4 ? 'line-through op50' : ''">do</span> <span v-click="4">try to</span></h1>
-<h1 class="text-5xl! font-bold" v-click="2">Inbox-Zero</h1>
-<h1 class="text-5xl!" v-click="3">Everyday</h1>
-
-
----
-layout: fact
-growX: 0
-growY: 50
----
-
-<h1 class="text-4xl!">What Does Empty Inbox Looks Like?</h1>
-
----
-layout: center
-growX: -10
-growY: -10
 class: text-center
 ---
 
-<img src="https://github.githubassets.com/images/modules/notifications/inbox-zero-dark.svg" />
+## I use the following structure for this presentation
 
-<h4 mt-6 mb--4 font-bold>All caught up!</h4>
-<p op50 text-sm>
-Take a break, write some code, do what you do best.
-</p>
+<!-- Draw the following using mermaid syntaxt:
 
----
-layout: center
-growX: 50
-growY: 0
----
+Context -> hypothesis -> methodology -> data analysis -> discussion -->
 
-# Why Inbox-Zero?
+<div class="mermaid" mt-4>
 
-<v-clicks>
+```mermaid
+graph LR
+  context[Context] --> hypothesis[Hypothesis]
+  hypothesis --> methodology[Methodology]
+  methodology --> data[Data Analysis]
+  data --> discussion[Discussion]
+```
 
-- Being responsive
-- Keep maintenance work in control
-- Don't accumulate work
-- Know what to focus on
+</div>
 
-</v-clicks>
+
+
+<!-- 
+Since you may want to view the slides later, I have hosted them online. You can use the link here to get them.
+-->
 
 ---
 layout: fact
@@ -111,29 +83,78 @@ growY: 0
 growSize: 1.5
 ---
 
-# Reduce Notifications Created
-contribution guide, issue form/templates, etc
+# Background
+Focus of the presentation, research context, and the hypothesis
 
 <div class="number-bg">0</div>
 
 ---
-
-# <span font-mono>.github</span> Magic Repo
-
-<img src="/dot-github-repo.png" w-100 rounded-md border="~ main" />
-
-
----
-layout: fact
+layout: center
 growX: 50
-growY: 120
-growSize: 1.5
-clicks: 1
+growY: 0
 ---
 
-<h1 :class="$slidev.nav.clicks === 1 ? 'line-through op50!' : ''"><span text-transparent text-8xl bg-clip-text bg-gradient-to-r from-rose-400 to-pink-600>TURN OFF</span> Notifications</h1>
+# Research background
 
-<p :class="$slidev.nav.clicks === 1 ? 'line-through op20!' : ''">and call it a day</p>
+
+<v-clicks depth="2">
+
+- Focus of this presentation: **Experimental Approach**...
+  - ... in particular, the evaluation of the experiment design.
+- Context: Social engineering attacks in information systems.
+
+</v-clicks>
+
+
+---
+layout: center
+growX: 50
+growY: 0
+---
+
+# Based on the literature review...
+
+<v-clicks>
+
+- The importance of the "information" element of social engineering is widely acknowledged in the literature.
+- Successful social engineering relies on effective information design, more than on the constantly changing medium of communication. 
+- However, current prevention strategies related to the "information" element are limited to awareness education and do not proactively support users' decision-making processes when faced with fabricated information in information systems. 
+- The less explored information systems’ own functions in mitigating social engineering attacks through fabricated information identification underscores the goal of research on the effectiveness of such functions.
+
+</v-clicks>
+
+---
+layout: center
+growX: 0
+growY: 0
+---
+
+<v-clicks>
+
+### $H_{0}$ =
+
+<div h-10></div>
+
+## Enterprise information systems that feature **support functions** to help user **identify fabricated information** are **more resilient against social engineering attacks**.
+
+</v-clicks>
+
+---
+layout: center
+class: text-center
+growX: 0
+growY: 50
+---
+
+<div uppercase tracking-widest op50>Side Note</div>
+
+# Why do I propose a single Hypothesis?
+
+<!-- 
+Consider the workload I have here in my Honours year - as the result of the discussion with my supervisors
+
+Simplisticity is a virtue
+-->
 
 ---
 layout: fact
@@ -141,151 +162,168 @@ growX: 50
 growY: 0
 growSize: 1.5
 ---
+# Learnings
+On Experiment Design, from Dr. Guihyun Park
 
-# Seek for Notifications
-don't let them seek for you
 
 <div class="number-bg">1</div>
 
+<!-- 
+I also want to draw some learnings on this course - namely, the experiment design discussed by Dr. Park
+ -->
+
 ---
 layout: center
+growX: 50
+growY: 0
 ---
+# Experiment Design
 
-<v-clicks depth="2">
+<v-clicks>
 
-- Turn off Email & App **Push** notifications
-
-- Look for notifications **proactively**
-
-  - Use GitHub Notifications Inbox
-
-  - Or try [volta.net](https://volta.net) <Volta h-4 inline-block ml1 />
+- A research investigation in which conditions are controlled.
+- One independent variable is manipulated (sometimes more than one).
+- Its effect on a dependent variable is measured.
 
 </v-clicks>
 
+Manipulation, comparison, and random assignment are the three key elements of an experiment.
 
 ---
 layout: fact
-growX: 0
-growY: 50
+growX: 50
+growY: 0
 growSize: 1.5
 ---
+# Proposed Methodology
+Controlled laboratory experiment
 
-# Group your Notifications
-by repository, instead of time
 
 <div class="number-bg">2</div>
 
----
-growX: 110
-growY: -10
-clicks: 2
----
-
-<img absolute left-10 top-10 v-click="0" src="/notifications-raw.png" w-150 mix-blend-plus-lighter />
-<Arrow x1="600" y1="200" x2="550" y2="75" text-lime shadow v-if="$slidev.nav.clicks === 1" />
-<img absolute left-10 top-10 v-click="2" src="/notifications-grouped.png" w-150 />
-
-
----
-layout: fact
-growX: 90
-growY: 90
-growSize: 1.5
----
-
-# What to Focus
-filter out the noise, prioritize
-
-<div class="number-bg">3</div>
-
+<!-- 
+How I would run the experiment
+-->
 
 ---
 layout: center
+growX: 50
+growY: 0
 ---
 
-<v-clicks depth="2">
+<v-clicks>
 
-- Dismiss issues/PRs that are **closed/merged**<br><span op50 translate-y--10px inline-block>(when not participant in; trust your team)</span>
-- Dismiss notifications of
-  - Bots 🤖
-  - New commits pushed to PRs
-  - GitHub Actions cancelled
-  - etc.
+I will use a **controlled laboratory experiment** to test the hypothesis.
 
+## Participants
+- A sample size of 40-50 participants (I aim to achieve: Cohen’s $d$ ~ 0.8, $α$ ~ 0.05, power level $1-β$ ~ 0.8) 
+  - The sample size should be sufficient and similar to previous experiments (e.g. McFarlane 1998)
+- Demographic: University students
+- Reward: $10 gift card as recompense for their time (they will be informed of this before the experiment)
+  - To provide a more pragmatic experience for participants (Kim, Barua, and Whinston 2002)
+- I will use a Kruskal–Wallis test to evaluate and make sure no significant differences in gender, age, level of previous exposure to social engineering attacks among participants.
+- Each participant should be **randomly assigned** to one of the two groups: **control** and **treatment**.
 </v-clicks>
 
 ---
 layout: center
 growX: 50
-growY: 100
-growSize: 1.1
+growY: 0
 ---
 
-<div text-center mt4 op50 italic font-serif mb2>I wrote a userscript:</div>
-<div flex="~ gap-2 items-center" text-3xl font-mono>
-<div i-simple-icons-github/> <a href="https://github.com/antfu/refined-github-notifications">antfu/refined-github-notifications</a>
-</div>
-<div text-center mt4 op50 italic font-serif v-click>It's hacky and opinionated!</div>
-
----
-growX: 110
-growY: 110
----
-
-<img absolute left-10 top-10 src="/notifications-grouped.png" w-150 />
-<img absolute left-10 top-10 v-click src="/notifications-refined.png" w-150 />
-
-<div absolute left-165 right-5 top-20>
 <v-clicks>
 
-- Automatically dismiss unrelated notifications
-- <b text-hex-a371f7>Colorize</b> notifications type
-- Single-instance notifications tab
-- Auto refresh
+I will use a **controlled laboratory experiment** to test the hypothesis.
+
+## Measures
+- The experiment is designed to be conducted on a standard PC (standard monitor, keyboard and mouse) to emulate a standard office operating environment.
+- The simulated environment of the social engineering attack is displayed using a customised web interface written by the author.
+  - The single browser running latest version of Chrome in the centre of the screen.
+  - Every participant will be given the same social engineering attack (in this case the same phishing email).
+  - In the treatment group, the support functions will be displayed as a dialog box as well as an AI-generated score board of information genuineness on the right side of the screen to help participants identify the fabricated information.
+- The dependent variable is measured by the number of participants who fall for the social engineering attack in each group.
+- The independent variable is measured by the presence of the support functions in the treatment group.
 
 </v-clicks>
-</div>
 
+<!--
+I have written the web interface for the experiment. but I will not show it here.
+ -->
+
+---
+layout: center
+growX: 50
+growY: 0
+---
+
+<v-clicks>
+
+I will use a **controlled laboratory experiment** to test the hypothesis.
+
+
+## Procedure
+- I expect to pilot-test and refine the experimental tasks and treatment conditions using 15 to 20 participants, to verify task comprehension and relevance.
+- The experiment is designed to use an isolated unallocated office to remove potential environmental distractions (McFarlane 2002). 
+- Participants will attend one at a time and sign a consent form before commencing. Participants were briefed on what the research involved and what would be done with their data after the experiment. 
+- Participants will first do an entrance questionnaire before commencement, documenting their personal demographics, educational background, proficiency and degree of exposure to social engineering attacks.
+- Participants will be given written instructions to ask them to complete the following tasks:
+  1. Read the email and decide what to do next.
+  2. If they click the link, they will be asked to enter their username and password.
+- On finishing, participants will complete another questionnaire to record their personal preferences and comments on potential further contact.
+
+</v-clicks>
+
+
+---
+layout: fact
+growX: 50
+growY: 0
+growSize: 1.5
+---
+# Data Analysis
+Skipped, as it's not a part of this course.
+
+<div class="number-bg">3</div>
+
+---
+layout: fact
+growX: 50
+growY: 0
+growSize: 1.5
+---
+# Discussion
+Contributions to knowledge and to practice
+
+
+<div class="number-bg">4</div>
 
 ---
 layout: center
 ---
+<h1 mb-2>Contributions to knowledge</h1>
 
-# Wishlist to GitHub
+<v-clicks>
 
-<v-clicks depth="2">
+- Despite much work into social enginering attacks, mostly at a technical level, very little work has focused on the cognitive side of the problem.
+- My research will contribute to knowledge by providing empirical evidence on the effectiveness of information support functions in mitigating social engineering attacks through fabricated information identification.
 
-- GitHub Notifications API, **Please**!
-- Fine-grained notifications filter
-  - Bots, type of notifications, random ping, etc.
-- More interactive notifications inbox
-  - Live updates
-  - Avoid hard refreshes
+<!--  
+This research makes the major contribution to knowledge by providing empirical evidence on the effectiveness of information support functions in mitigating social engineering attacks through fabricated information identification.
 
+
+-->
 </v-clicks>
 
 ---
 layout: center
 ---
-
-<div w-100>
-
-<h1 mb-2>Warping up</h1>
+<h1 mb-2>Additionally...</h1>
 
 <v-clicks>
 
-- Keep maintenance scope manageable, don't let it grow out of control.
-
-- **Reply and forget** - new notifications will come up once you get replies.
-
-- Use tools to help you focus.
-
-- **Enjoy it!**
+- The insights gained from the research will inform the development of a decision support system – which is the high-level aim of my Honours research - that can provide universal assistance for preventing social engineering attacks, regardless of the medium used for the attack.
 
 </v-clicks>
-
-</div>
 
 ---
 layout: intro
@@ -295,5 +333,3 @@ growY: 120
 ---
 
 # Thank You!
-
-Slides on [antfu.me](https://antfu.me)
